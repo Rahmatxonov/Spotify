@@ -1,0 +1,11 @@
+.navRight {
+  max-width: 346px;
+  width: 100%;
+  padding: 0 0 0 20px;
+}
+
+@media (max-width: 640px) {
+  .navRight {
+    display: none;
+  }
+}

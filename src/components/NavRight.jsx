@@ -13,7 +13,7 @@ const NavRight = () => {
   };
 
   return (
-    <>
+    <div className="navRight">
       <div className="max-w-[346px] flex items-center justify-between mt-[30px]">
         <h3 className="text-[20px] font-bold leading-[25px] text-[#cccccc]">
           Friend Activity
@@ -36,13 +36,13 @@ const NavRight = () => {
 
       {showMenu && (
         <div className="text-[#cccccc]">
-          <p className="pt-[39px] text-[18px] leading-[24px] font-normal">
+          <p className="pt-[39px] text-[16px] leading-[24px] font-normal">
             Let friends and followers on Spotify see what you’re listening to.
           </p>
           <div className="flex items-center space-x-4 mt-10">
-            <span className="relative flex items-center justify-center w-[62px] h-[62px] bg-gray-500 rounded-[50%] ">
+            <span className="relative flex items-center justify-center w-[52px] h-[52px] bg-gray-500 rounded-[50%] ">
               <FaRegUser className="text-[25px] text-gray-300" />
-              <span className="absolute w-[15px] h-[15px] bg-blue-700 rounded-[50%] top-1 right-0"></span>
+              <span className="absolute w-[12px] h-[12px] bg-blue-700 rounded-[50%] top-1 right-0"></span>
             </span>
             <span>
               <h4>John Doe</h4>
@@ -50,9 +50,9 @@ const NavRight = () => {
             </span>
           </div>
           <div className="flex items-center space-x-4 mt-10">
-            <span className="relative flex items-center justify-center w-[62px] h-[62px] bg-gray-500 rounded-[50%]">
+            <span className="relative flex items-center justify-center w-[52px] h-[52px] bg-gray-500 rounded-[50%]">
               <FaRegUser className="text-[25px] text-gray-300" />
-              <span className="absolute w-[15px] h-[15px] bg-blue-700 rounded-[50%] top-1 right-0"></span>
+              <span className="absolute w-[12px] h-[12px] bg-blue-700 rounded-[50%] top-1 right-0"></span>
             </span>
             <span>
               <h4>John Doe</h4>
@@ -60,25 +60,25 @@ const NavRight = () => {
             </span>
           </div>
           <div className="flex items-center space-x-4 mt-10">
-            <span className="relative flex items-center justify-center w-[62px] h-[62px] bg-gray-500 rounded-[50%]">
+            <span className="relative flex items-center justify-center w-[52px] h-[52px] bg-gray-500 rounded-[50%]">
               <FaRegUser className="text-[25px] text-gray-300" />
-              <span className="absolute w-[15px] h-[15px] bg-blue-700 rounded-[50%] top-1 right-0"></span>
+              <span className="absolute w-[12px] h-[12px] bg-blue-700 rounded-[50%] top-1 right-0"></span>
             </span>
             <span>
               <h4>John Doe</h4>
               <p className="text-[14px]">Web Developer</p>
             </span>
           </div>
-          <p className="pt-[20px] text-[18px] leading-[25px] font-normal">
+          <p className="pt-[20px] text-[16px] leading-[25px] font-normal">
             Go to Settings Social and enable “Share my listening activity on
             Spotify.’ You can turn this off at any time.
           </p>
-          <button className="w-[233px] h-[62px] uppercase bg-white text-black rounded-[50px] mt-[23px] font-bold text-[18px] leading-[22px] tracking-[14%]">
+          <button className="w-[180px] h-[45px] uppercase bg-white text-black rounded-[50px] mt-[23px] font-bold text-[18px] leading-[22px] tracking-[14%]">
             settings
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

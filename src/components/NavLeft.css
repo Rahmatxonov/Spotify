@@ -23,12 +23,18 @@ hr {
 .close {
   display: none;
 }
+.navLeft {
+  max-width: 310px;
+  width: 100%;
+}
 @media (max-width: 768px) {
-  .navLeft {
-    position: fixed;
-    left: 20px;
-  }
   .close {
     display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .navLeft {
+    display: none;
   }
 }

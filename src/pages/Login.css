@@ -1,0 +1,240 @@
+.form-wrap {
+  background-image: url(../assets/images/spotify.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -70px;
+  height: 100vh;
+}
+.code {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1150px;
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+}
+.text {
+  max-width: 510px;
+  text-align: left;
+}
+.free {
+  max-width: 540px;
+  width: 100%;
+  display: block;
+}
+.line {
+  max-width: 540px;
+  width: 100%;
+  background-color: #5e54a4;
+  padding: 17px 110px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px 0px #00000025;
+  margin-bottom: 24px;
+}
+.load {
+  padding: 40px;
+  max-width: 540px;
+  width: 100%;
+  background-color: #02fa2764;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px 0px #00000025;
+}
+.create {
+  padding: 15px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.25px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.btn {
+  background: #38cc8b;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px -4px 0px 0px #00000017 inset;
+}
+.btn:hover {
+  background-color: #77e2b3;
+}
+@media (max-width: 1085px) {
+  .text {
+    text-align: center;
+    margin-top: 88px;
+  }
+  .h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.2916666865348816px;
+  }
+  .line {
+    padding: 18px 66px;
+    text-align: center;
+    margin-top: 64px;
+  }
+  .small {
+    line-height: 21px;
+  }
+}
+.error {
+  border-color: red !important;
+  color: red !important;
+}
+
+.error::placeholder {
+  color: red !important;
+  border: red !important;
+}
+#form {
+  display: grid;
+  place-items: center;
+  width: 300px;
+  height: 460px;
+  padding: 25px;
+  background-color: #161616ae;
+  box-shadow: 0px 15px 60px #00ff7f;
+  outline: 1px solid #2b9962;
+  border-radius: 10px;
+  margin: 0 auto;
+  transform: translateY(227px);
+}
+
+#form-body {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  left: 25px;
+  width: 230px;
+  margin: -156px auto 0 auto;
+}
+
+#welcome-lines {
+  text-align: center;
+  line-height: 1;
+}
+
+#welcome-line-1 {
+  color: #00ff7f;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+#welcome-line-2 {
+  color: #ffffff;
+  font-size: 19px;
+}
+
+#input-area {
+  margin-top: 40px;
+}
+
+.form-inp {
+  padding: 11px 25px;
+  background: transparent;
+  border: 1px solid #e3e3e3;
+  line-height: 1;
+  border-radius: 8px;
+}
+
+.form-inp:focus {
+  border: 1px solid #00ff7f;
+}
+
+.form-inp:first-child {
+  margin-bottom: 15px;
+}
+
+.form-inp input {
+  width: 100%;
+  background: none;
+  font-size: 13.4px;
+  color: #00ff7f;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-inp input:focus {
+  outline: none;
+}
+
+#submit-button-cvr {
+  margin-top: 20px;
+}
+
+#submit-button {
+  display: block;
+  width: 100%;
+  color: #00ff7f;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  padding: 14px 13px 12px 13px;
+  border: 0;
+  outline: 1px solid #00ff7f;
+  border-radius: 8px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+#submit-button:hover {
+  transition: all ease-in-out 0.3s;
+  background-color: #00ff7f;
+  color: #161616;
+  cursor: pointer;
+}
+
+#forgot-pass {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#forgot-pass a {
+  color: #868686;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#bar {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  width: 28px;
+  height: 8px;
+  margin-left: -33px;
+  background-color: #00ff7f;
+  border-radius: 10px;
+}
+
+#bar:before,
+#bar:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ececec;
+  border-radius: 50%;
+}
+
+#bar:before {
+  right: -20px;
+}
+
+#bar:after {
+  right: -38px;
+}

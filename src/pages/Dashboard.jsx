@@ -30,7 +30,7 @@ const Dashboard = ({ code }) => {
   useEffect(() => {
     if (accessToken) {
       spotifyApi.setAccessToken(accessToken);
-      console.log("Spotify API Access Token Set:", accessToken);
+      // console.log("Spotify API Access Token Set:", accessToken);
     }
   }, [accessToken, title, albums]);
 
@@ -43,10 +43,15 @@ const Dashboard = ({ code }) => {
     spotifyApi
       .searchTracks(title)
       .then((res) => {
+        console.log(res);
         setArtists(
           res.body.tracks.items.map((item) => ({
             img: item.album.images[0]?.url || "",
             name: item.name,
+            popularity: item.popularity,
+            track_number: item.track_number,
+            type: item.type,
+            release_date: item.album.release_date,
             uri: {
               id: item.id,
               name: item.artists[0].name,
@@ -98,7 +103,7 @@ const Dashboard = ({ code }) => {
 
   return (
     <>
-      <div className="h-[60vh] hero">
+      <div className="h-[400px] hero">
         <div className="flex items-center space-x-[22px] p-5">
           <span className="flex items-center justify-center w-[40px] h-[40px] rounded-[50%] bg-blue-950 ">
             <MdKeyboardArrowLeft
@@ -120,21 +125,22 @@ const Dashboard = ({ code }) => {
       <div className="m-5">
         <input
           type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Search music..."
-          className="w-full p-3 border-slate-400 border-[2px] rounded-md outline-none"
-        />
-        <input
-          type="text"
           value={albums}
           onChange={(e) => setAlbums(e.target.value)}
           placeholder="Search albums..."
           className="w-full p-3 border-slate-400 border-[2px] rounded-md outline-none mt-2"
         />
+
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Search music..."
+          className="w-full p-3 border-slate-400 border-[2px] rounded-md outline-none"
+        />
       </div>
       {loading ? (
-        <div>Loading...</div>
+        <div className="loader"></div>
       ) : (
         <>
           <div className="flex flex-wrap gap-5 justify-center">

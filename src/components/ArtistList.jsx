@@ -1,9 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ArtistList = ({ item, choosePlay }) => {
+  const navigate = useNavigate();
+  const handleDoubleClick = () => {
+    navigate("/single", { state: { item } });
+  };
   return (
     <div
       onClick={() => choosePlay(item)}
+      onDoubleClick={() => handleDoubleClick()}
       className="w-full max-w-[320px] mx-auto bg-white shadow-md rounded-lg overflow-hidden dark:bg-zinc-900 mt-[50px]"
     >
       <img src={item.img} alt="Artist" className="w-full h-48 object-cover" />
@@ -62,6 +68,11 @@ const ArtistList = ({ item, choosePlay }) => {
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
           </svg>
         </div>
+      </div>
+      <div className="hidden">
+        <p>Popularity: {item.popularity}</p>
+        <p>Type: {item.type}</p>
+        <p>{item.release_date}</p>
       </div>
       <div className="relative">
         <div className="absolute inset-0 flex items-center justify-center"></div>

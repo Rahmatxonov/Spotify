@@ -16,7 +16,30 @@ body {
 .hero {
   background: linear-gradient(180deg, #3333a3 5.09%, #12121249 100%);
 }
+.loader {
+  width: 60px;
+  height: 60px;
+  margin: 50% auto;
+  border: 10px solid #1cd42550;
+  border-top-color: #1cd425;
+  animation: spin013151 1s linear infinite;
+  border-radius: 100%;
+  z-index: 100;
+}
+
+@keyframes spin013151 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @font-face {
   font-family: Circular sans-serif;
   src: url(./assets/fonts/circular-std/CircularStd-Bold.otf);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    width: 100%;
+  }
 }

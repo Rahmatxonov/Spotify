@@ -18,7 +18,7 @@ const NavLeft = () => {
     <div className="navLeft">
       {show ? (
         <>
-          <ul className="mt-[70px] space-y-[20px] whitespace-nowrap">
+          <ul className="mt-[70px] space-y-[20px]">
             <li>
               <span className="flex items-center justify-between">
                 <NavLink
@@ -78,28 +78,28 @@ const NavLeft = () => {
             </span>
             <hr />
             <ul className="text-gray-400 space-y-[18px]">
-              <li className="text-[18px] leading-[22px]">Chill Mix</li>
-              <li className="text-[18px] leading-[22px]">Insta Hits</li>
-              <li className="text-[18px] leading-[22px]">
+              <li className="text-[16px] leading-[22px]">Chill Mix</li>
+              <li className="text-[16px] leading-[22px]">Insta Hits</li>
+              <li className="text-[16px] leading-[22px]">
                 Your Top Songs 2021
               </li>
-              <li className="text-[18px] leading-[22px]">Mellow Songs</li>
-              <li className="text-[18px] leading-[22px]">
+              <li className="text-[16px] leading-[22px]">Mellow Songs</li>
+              <li className="text-[16px] leading-[22px]">
                 Anime Lofi & Chillhop Music
               </li>
-              <li className="text-[18px] leading-[22px]">
+              <li className="text-[16px] leading-[22px]">
                 BG Afro “Select” Vibes
               </li>
-              <li className="text-[18px] leading-[22px]">
+              <li className="text-[16px] leading-[22px]">
                 Afro “Select” Vibes
               </li>
-              <li className="text-[18px] leading-[22px]">Happy Hits!</li>
-              <li className="text-[18px] leading-[22px]">Instrumental Study</li>
-              <li className="text-[18px] leading-[22px]">OST Compilations</li>
-              <li className="text-[18px] leading-[22px]">
+              <li className="text-[16px] leading-[22px]">Happy Hits!</li>
+              <li className="text-[16px] leading-[22px]">Instrumental Study</li>
+              <li className="text-[16px] leading-[22px]">OST Compilations</li>
+              <li className="text-[16px] leading-[22px]">
                 Nostalgia for old souled mill...
               </li>
-              <li className="text-[18px] leading-[22px]">Mixed Feelings</li>
+              <li className="text-[16px] leading-[22px]">Mixed Feelings</li>
             </ul>
           </ul>
         </>
