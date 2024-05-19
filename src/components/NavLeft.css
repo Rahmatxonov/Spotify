@@ -1,0 +1,34 @@
+.active {
+  color: white;
+}
+hr {
+  opacity: 15%;
+}
+.heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(133.58deg, #3822ea 3.13%, #c7e9d7 97.71%);
+}
+.add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #aaa5a5;
+}
+.close {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navLeft {
+    position: fixed;
+    left: 20px;
+  }
+  .close {
+    display: block;
+  }
+}

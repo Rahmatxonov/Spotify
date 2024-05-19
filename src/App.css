@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Circular sans-serif;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+.container {
+  max-width: 1728px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.hero {
+  background: linear-gradient(180deg, #3333a3 5.09%, #12121249 100%);
+}
+@font-face {
+  font-family: Circular sans-serif;
+  src: url(./assets/fonts/circular-std/CircularStd-Bold.otf);
+}
