@@ -16,34 +16,36 @@ const List = () => {
 
   useEffect(() => {
     if (accessToken) {
-      spotifyApi.setArtistsList(accessToken);
+      spotifyApi.setAccessToken(accessToken);
     }
-  }, [accessToken, title]);
+  }, [accessToken]);
 
   useEffect(() => {
-    if (!title || !accessToken) {
+    if (!accessToken) {
       setArtistsList([]);
       return;
     }
     setLoading(true);
+    spotifyApi.setAccessToken(accessToken);
     spotifyApi
-      .searchTracks(title)
+      .searchTracks("Ummon")
       .then((res) => {
-        const tracks = res.body.tracks.items.map((item) => ({
-          img: item.album.images[0]?.url || "",
-          name: item.name,
-          popularity: item.popularity,
-          track_number: item.track_number,
-          type: item.type,
-          release_date: item.album.release_date,
-          uri: {
-            id: item.id,
-            name: item.artists[0].name,
-            uri: item.uri,
-          },
-        }));
-        setArtistsList(tracks);
-        console.log("Fetched Tracks:", tracks);
+        console.log(res);
+        setArtistsList(
+          res.body.tracks.items.map((item) => ({
+            img: item.album.images[0]?.url || "",
+            name: item.name,
+            popularity: item.popularity,
+            track_number: item.track_number,
+            type: item.type,
+            release_date: item.album.release_date,
+            uri: {
+              id: item.id,
+              name: item.artists[0].name,
+              uri: item.uri,
+            },
+          }))
+        );
       })
       .catch((err) => {
         setArtistsList([]);
@@ -52,7 +54,7 @@ const List = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, [title, accessToken]);
+  }, [accessToken]);
 
   return (
     <div>
@@ -61,7 +63,6 @@ const List = () => {
       ) : (
         artistList.map((item) => (
           <div key={item.uri.id} className="artist-item">
-            <p className="text-white">Helloooo</p>
             <img src={item.img} alt={item.name} />
             <p>{item.name}</p>
             <p>{item.uri.name}</p>

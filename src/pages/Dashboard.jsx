@@ -85,6 +85,7 @@ const Dashboard = ({ code }) => {
       return;
     }
     spotifyApi.searchAlbums(albums).then((res) => {
+      console.log(res);
       setAlbumList(
         res.body.albums.items.map((item) => ({
           img: item.images[0]?.url || "",

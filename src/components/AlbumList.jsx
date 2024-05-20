@@ -3,10 +3,9 @@ import "./AlbumList.css";
 const AlbumList = ({ item }) => {
   return (
     <div className="book mt-[50px]">
-      <span>
-        <p>{item.name}</p>
-        <p>{item.uri.name}</p>
-      </span>
+      <p>Artists: {item.uri.name}</p>
+      <p>Song: {item.name}</p>
+
       <div className="cover">
         <img src={item.img} alt="image" className="w-full h-full" />
       </div>
