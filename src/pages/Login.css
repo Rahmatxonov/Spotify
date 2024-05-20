@@ -2,7 +2,7 @@
   background-image: url(../assets/images/spotify.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: -70px;
+  background-position: center;
   height: 100vh;
 }
 .code {

@@ -3,6 +3,7 @@ import SpotifyWebPlayer from "react-spotify-web-playback";
 const PlayBack = ({ accessToken, play, playing, setPlaying }) => {
   return (
     <SpotifyWebPlayer
+      className="w-full"
       play={playing}
       token={accessToken}
       uris={play ? [play] : []}

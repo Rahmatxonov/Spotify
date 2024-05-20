@@ -24,7 +24,7 @@ hr {
   display: none;
 }
 .navLeft {
-  max-width: 310px;
+  max-width: 310px !important;
   width: 100%;
 }
 @media (max-width: 768px) {
